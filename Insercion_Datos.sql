@@ -47,19 +47,6 @@ INSERT INTO sistema_operativo VALUES
     ('¡OS_13','13.7')
     ;
 -- TABLA 5
-INSERT INTO servicio VALUES
-    ('Platzi','Educacion','Web'),
-    ('Udemy','Educacion','Web'),
-    ('YoutubeMusic','Streaming','Web'),
-    ('Spotify','Streaming','Web, Pc, Movil, Tv'),
-    ('Netflix','Streaming','Web, Pc, Movil, Tv'),
-    ('Dropbox','Nube','Web, Pc, Movil'),
-    ('Drive','Nube','Web, Movil'),
-    ('Mega','Nube','Web, Movil, Pc'),
-    ('SoundCloud','Streaming','Web'),
-    ('HBOMAX','Streaming','Web, Movil, Tv')
-    ;
--- TABLA 6
 INSERT INTO plataforma VALUES
     ('Movil','rosalyn_matthams@gmail.com','¡OS_13','720X1280'),
     ('Movil','miguel_boyce@gmail.com','Android_12L','720X1280'),
@@ -73,10 +60,23 @@ INSERT INTO plataforma VALUES
     ('Pc','kelli_brett@protonmail.com','Windows_11','1920X1080'),
     ('Tv','maynard_penn@aol.com','Android_12L','3840X2160')
     ;
+-- TABLA 6
+INSERT INTO servicio VALUES
+    ('Platzi','Educacion','Web'),
+    ('Udemy','Educacion','Web'),
+    ('YoutubeMusic','Streaming','Web'),
+    ('Spotify','Streaming','Web, Pc, Movil, Tv'),
+    ('Netflix','Streaming','Web, Pc, Movil, Tv'),
+    ('Dropbox','Nube','Web, Pc, Movil'),
+    ('Drive','Nube','Web, Movil'),
+    ('Mega','Nube','Web, Movil, Pc'),
+    ('SoundCloud','Streaming','Web'),
+    ('HBOMAX','Streaming','Web, Movil, Tv')
+    ;
 -- TABLA 7
 INSERT INTO descuento VALUES
     (1,'maynard_penn@aol.com','REINTEGRO35%','Platzi','2022-12-04','35% reintegro con la suscripcion de un anio'),
-    (2,'kelli_brett@protonmail.com','50%OFF','Souncloud','2022-01-04','50% OFF en el segundo mes'),
+    (2,'kelli_brett@protonmail.com','50%OFF','Soundcloud','2022-01-04','50% OFF en el segundo mes'),
     (3,'hilde_milne@protonmail.com','25%DESCUENTO','Drive','2022-12-02','25% descuento'),
     (4,'hilde_milne@protonmail.com','MESGRATIS','YoutubeMusic','2021-02-18','Primer mes GRATIS'),
     (5,'levi_west@yandex.com','MESESPRUEBA','HBOMAX','2022-09-27','Tres meses de PRUEBA'),

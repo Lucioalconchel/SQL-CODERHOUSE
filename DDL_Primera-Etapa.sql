@@ -49,5 +49,6 @@ CREATE TABLE descuento(
     service_name VARCHAR(30) NOT NULL,
     expiration_date date NOT NULL,
     description VARCHAR(200) NOT NULL,
-    FOREIGN KEY (email_user) REFERENCES usuario (email)
+    FOREIGN KEY (email_user) REFERENCES usuario (email),
+    FOREIGN KEY (service_name) REFERENCES servicio (service_name)
 );
