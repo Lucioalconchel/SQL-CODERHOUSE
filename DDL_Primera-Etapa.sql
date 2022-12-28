@@ -19,7 +19,8 @@ CREATE TABLE pago(
     payment_method VARCHAR(30) NOT NULL,
     bank_name VARCHAR(50) ,
     service_name  VARCHAR(30) NOT NULL,
-    FOREIGN KEY (email_user) REFERENCES usuario (email)
+    FOREIGN KEY (email_user) REFERENCES usuario (email),
+    FOREIGN KEY (service_name) REFERENCES servicio (service_name)
 );
 
 CREATE TABLE sistema_operativo(

@@ -17,21 +17,21 @@ INSERT INTO reclamo VALUES
     (1,'maynard_penn@aol.com','2021-11-16','No se acredito mi suscripcion'),
     (2,'kelli_brett@protonmail.com','2022-12-23','Caidas intermitentes en el servicio'),
     (3,'hilde_milne@protonmail.com','2022-11-24','No es lo que esperaba'),
-    (4,'hilde_milne@protonmail.com','2022-07-06','Catalogo reducido y no cuenta con proteccion para menores')
+    (4,'ardell_samuels@mail.com','2022-07-06','Catalogo reducido y no cuenta con proteccion para menores')
     ;
 -- TABLA 3
-INSERT INTO pago VALUES
-    ('5HO85','rosalyn_matthams@gmail.com','Tarjeta','S.A. Banco Santander','Streaming'),
-    ('MAR0X','miguel_boyce@gmail.com','Tarjeta','BANCO SUPERVIELLE S.A.','Streaming'),
-    ('202WI','refugio_reynolds@outlook.com','Deposito','NULL','Nube'),
-    ('ZKHYR','hilde_milne@protonmail.com','Deposito','NULL','Nube'),
-    ('V7VUL','ardell_samuels@mail.com','Deposito','NULL','Educacion'),
-    ('L23E6','lissette_silva@yandex.com','Tarjeta','BANCO SUPERVIELLE S.A.','Nube'),
-    ('PXO5B','tasia_lloyd@hotmail.com','Tarjeta','BANCO DE LA CIUDAD DE BUENOS AIRES','Educacion'),
-    ('1ZJH6','albertina_redman@yahoo.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','Nube'),
-    ('22N18','levi_west@yandex.com','Deposito','NULL','Streaming'),
-    ('L9C39','kelli_brett@protonmail.com','Deposito','NULL','Educacion'),
-    ('AMJB5','maynard_penn@aol.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','Streaming')
+INSERT INTO pago VALUES 
+    ('5HO85','rosalyn_matthams@gmail.com','Tarjeta','S.A. Banco Santander','HBOMAX'),
+    ('MAR0X','miguel_boyce@gmail.com','Tarjeta','BANCO SUPERVIELLE S.A.','Soundcloud'),
+    ('202WI','refugio_reynolds@outlook.com','Deposito','NULL','Drive'),
+    ('ZKHYR','hilde_milne@protonmail.com','Deposito','NULL','YoutubeMusic'),
+    ('V7VUL','ardell_samuels@mail.com','Deposito','NULL','Spotify'),
+    ('L23E6','lissette_silva@yandex.com','Tarjeta','BANCO SUPERVIELLE S.A.','Spotify'),
+    ('PXO5B','tasia_lloyd@hotmail.com','Tarjeta','BANCO DE LA CIUDAD DE BUENOS AIRES','Dropbox'),
+    ('1ZJH6','albertina_redman@yahoo.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','YoutubeMusic'),
+    ('22N18','levi_west@yandex.com','Deposito','NULL','Netflix'),
+    ('L9C39','kelli_brett@protonmail.com','Deposito','NULL','YoutubeMusic'),
+    ('AMJB5','maynard_penn@aol.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','Platzi')
     ;
 -- TABLA 4
 INSERT INTO sistema_operativo VALUES
