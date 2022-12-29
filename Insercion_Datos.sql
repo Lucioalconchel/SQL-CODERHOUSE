@@ -19,20 +19,6 @@ INSERT INTO reclamo VALUES
     (3,'hilde_milne@protonmail.com','2022-11-24','No es lo que esperaba'),
     (4,'ardell_samuels@mail.com','2022-07-06','Catalogo reducido y no cuenta con proteccion para menores')
     ;
--- TABLA 3
-INSERT INTO pago VALUES 
-    ('5HO85','rosalyn_matthams@gmail.com','Tarjeta','S.A. Banco Santander','HBOMAX'),
-    ('MAR0X','miguel_boyce@gmail.com','Tarjeta','BANCO SUPERVIELLE S.A.','Soundcloud'),
-    ('202WI','refugio_reynolds@outlook.com','Deposito','NULL','Drive'),
-    ('ZKHYR','hilde_milne@protonmail.com','Deposito','NULL','YoutubeMusic'),
-    ('V7VUL','ardell_samuels@mail.com','Deposito','NULL','Spotify'),
-    ('L23E6','lissette_silva@yandex.com','Tarjeta','BANCO SUPERVIELLE S.A.','Spotify'),
-    ('PXO5B','tasia_lloyd@hotmail.com','Tarjeta','BANCO DE LA CIUDAD DE BUENOS AIRES','Dropbox'),
-    ('1ZJH6','albertina_redman@yahoo.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','YoutubeMusic'),
-    ('22N18','levi_west@yandex.com','Deposito','NULL','Netflix'),
-    ('L9C39','kelli_brett@protonmail.com','Deposito','NULL','YoutubeMusic'),
-    ('AMJB5','maynard_penn@aol.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','Platzi')
-    ;
 -- TABLA 4
 INSERT INTO sistema_operativo VALUES
     ('Windows_8.1','6.3'),
@@ -72,6 +58,20 @@ INSERT INTO servicio VALUES
     ('Mega','Nube','Web, Movil, Pc'),
     ('SoundCloud','Streaming','Web'),
     ('HBOMAX','Streaming','Web, Movil, Tv')
+    ;
+    -- TABLA 3
+INSERT INTO pago VALUES 
+    ('5HO85','rosalyn_matthams@gmail.com','Tarjeta','S.A. Banco Santander','HBOMAX'),
+    ('MAR0X','miguel_boyce@gmail.com','Tarjeta','BANCO SUPERVIELLE S.A.','Soundcloud'),
+    ('202WI','refugio_reynolds@outlook.com','Deposito','NULL','Drive'),
+    ('ZKHYR','hilde_milne@protonmail.com','Deposito','NULL','YoutubeMusic'),
+    ('V7VUL','ardell_samuels@mail.com','Deposito','NULL','Spotify'),
+    ('L23E6','lissette_silva@yandex.com','Tarjeta','BANCO SUPERVIELLE S.A.','Spotify'),
+    ('PXO5B','tasia_lloyd@hotmail.com','Tarjeta','BANCO DE LA CIUDAD DE BUENOS AIRES','Dropbox'),
+    ('1ZJH6','albertina_redman@yahoo.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','YoutubeMusic'),
+    ('22N18','levi_west@yandex.com','Deposito','NULL','Netflix'),
+    ('L9C39','kelli_brett@protonmail.com','Deposito','NULL','YoutubeMusic'),
+    ('AMJB5','maynard_penn@aol.com','Tarjeta','BANCO BBVA ARGENTINA S.A.','Platzi')
     ;
 -- TABLA 7
 INSERT INTO descuento VALUES
