@@ -6,7 +6,10 @@ BEGIN
     SELECT COUNT(*) INTO clausula FROM cuenta;
 	IF id_param <= clausula THEN
 		SELECT
-			*
+			email_user AS Email,
+            user AS User,
+            service_name AS Service,
+            type_service AS Type
 		FROM cuenta
 		WHERE id_user = id_param;
     ELSE
