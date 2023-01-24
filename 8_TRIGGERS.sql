@@ -1,3 +1,4 @@
+-- Creacion de Tablas LOG
 CREATE TABLE log_price(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     service_name VARCHAR(30),
@@ -11,7 +12,7 @@ CREATE TABLE log_pay(
     pay_day TIMESTAMP
 );
 
--- ----------------------------------------------------------------
+-- TRIGGER 1
 DELIMITER $$
 CREATE TRIGGER tr_update_old_price_before
 BEFORE UPDATE ON servicio
@@ -21,7 +22,7 @@ BEGIN
     VALUES (OLD.service_name, OLD.price, current_timestamp());
 END
 $$
--- -----------------------------------------------------------------
+-- TRIGGER 2
 DELIMITER $$
 CREATE TRIGGER tr_insert_new_pay_after
 AFTER INSERT ON pago
