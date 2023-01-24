@@ -22,7 +22,7 @@ CREATE TABLE tarjeta(
     bank_name VARCHAR(50) NOT NULL,
     security_code INT NOT NULL,
     expiration_date date NOT NULL,
-    type_card VARCHAR(30) NOT NULL DEFAULT 'Masterd Card',
+    type_card VARCHAR(30) NOT NULL DEFAULT 'Master Card',
 	first_name VARCHAR(20) NOT NULL,
 	last_name VARCHAR(20) NOT NULL,
     dni VARCHAR(8) NOT NULL DEFAULT '99999999',
