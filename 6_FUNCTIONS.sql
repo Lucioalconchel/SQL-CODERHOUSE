@@ -7,7 +7,7 @@ BEGIN
     SELECT
 	price INTO result_price
 	FROM servicio
-	WHERE service_name = 'YoutubeMusic';
+	WHERE service_name = service_name_param;
 	RETURN result_price;
 END
 $$
