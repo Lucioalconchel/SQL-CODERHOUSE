@@ -6,4 +6,5 @@ DROP TABLE pago;
 DROP TABLE cuenta;
 DROP TABLE tarjeta;
 DROP TABLE usuario;
+DROP TABLE pais;
 DROP TABLE servicio;
