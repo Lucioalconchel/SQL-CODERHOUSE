@@ -85,3 +85,61 @@ es sencillo, no tiene parametros IN y OUT, solamente se ejecuta como un metodo.
 El mismo hace la validacion y si encuentra que la cantidad de id de reclamo es distinto a 0
 trunca la tabla, en caso contrario lo inserta
 */
+-- ---------------------------------------------------------------------------
+start transaction;
+CALL sp_new_servicio('VSCODE', 'Educacion', 200.99, 'PC');
+rollback;
+select * from log_service;
+
+start transaction;
+CALL sp_delete_servicio('Platzi');
+rollback;
+select * from log_service;
+
+start transaction;
+CALL sp_new_pais('CL', 'CHILE', 'PESO CL', 1000.99);
+rollback;
+select * from log_pais;
+
+
+start transaction;
+CALL sp_update_change_dollar_pais('ARG',  1000.99);
+rollback;
+select * from log_pais;
+
+start transaction;
+CALL sp_delete_pais('ARG');
+rollback;
+select * from log_pais;
+
+
+start transaction;
+CALL sp_new_usuario('42272418', 'Lucio', 'Alconchel', 23, 'ARG', 'lucioalconchelsj@gmail.com');
+rollback;
+select * from log_usuario;
+
+start transaction;
+CALL sp_delete_usuario('39478272');
+rollback;
+select * from log_usuario;
+
+start transaction;
+CALL sp_update_password_cuenta(1, 'a2jkosnf124');
+rollback;
+select * from log_cuenta;
+
+start transaction;
+CALL sp_update_card_number_cuenta(1, '5317-6612-0661-0764');
+rollback;
+select * from log_cuenta;
+
+start transaction;
+CALL sp_delete_cuenta (1);
+rollback;
+select * from log_cuenta;
+
+start transaction;
+CALL sp_delete_tarjeta('3536-8288-6563-3243');
+rollback;
+select * from log_tarjeta;
+

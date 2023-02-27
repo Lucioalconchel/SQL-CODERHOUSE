@@ -1,26 +1,3 @@
-/*
-Las tablas que se encuentran respaldadas en este script son:
-  cuenta
-  descuento
-  pago
-  plataforma
-  reclamo
-  servicio
-  sistema_operativo
-  tarjeta
-  usuario
-Las tablas excluidas son:
-    log_pay
-    log_price
-    Todas las vistas:
-        vw_discount
-        vw_claim
-        vw_user
-        vw_plataform
-        vw_acount
-Las tablas se encuentran excluidas (log_price y log_pay) porque fueron creadas en el contexto de la funcionalidad
-del trigger, como tal no tienen un insert independiente
-*/
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: tp_alconchel
@@ -44,7 +21,7 @@ del trigger, como tal no tienen un insert independiente
 
 LOCK TABLES `cuenta` WRITE;
 /*!40000 ALTER TABLE `cuenta` DISABLE KEYS */;
-INSERT INTO `cuenta` VALUES (1,'maynard_penn@aol.com','maybard_penn','NAtontLeAMil','5317-6612-0661-0764','Platzi','Educacion'),(2,'kelli_brett@protonmail.com','BrettKel','bUtMATINdo','3546-9540-5360-2564','SoundCloud','Streaming'),(3,'hilde_milne@protonmail.com','milnehilde','stOrANIaNc','5086-3467-5068-2166','Drive','Nube'),(4,'hilde_milne@protonmail.com','milnehilde','PIRflAtegI','5086-3467-5068-2166','YoutubeMusic','Streaming'),(5,'levi_west@yandex.com','wevi','ArDAbcarIN','4953-1354-8126-0076','HBOMAX','Streaming'),(6,'levi_west@yandex.com','levi_west','ComPEneriL','4953-1354-8126-0076','Udemy','Educacion'),(7,'miguel_boyce@gmail.com','boycemig','opyaNAnETA','5030-6937-1756-2651','HBOMAX','Streaming'),(8,'lissette_silva@yandex.com','Silvalissette','oUgeNdRaPO','4146-7691-1911-4632','Dropbox','Nube'),(9,'refugio_reynolds@outlook.com',NULL,'nfiRsTICEo','4204-2672-6934-7929','Mega','Nube'),(10,'rosalyn_matthams@gmail.com','mattrosa','RpSEdGeNta','4201-6811-9381-2100','Spotify','Streaming'),(11,'ardell_samuels@mail.com',NULL,'acaNTAwmaTiv','5025-8381-1770-9900','Mega','Nube'),(12,'albertina_redman@yahoo.com','albertinaman','escUBsIBluSc','3536-8288-6563-3243','Spotify','Streaming'),(13,'ardell_samuels@mail.com','elsard','teRnaPORnOrM','5025-8381-1770-9900','Spotify','Streaming'),(14,'albertina_redman@yahoo.com','albertina_redman','CASpiSeCieSt','3536-8288-6563-3243','Platzi','Educacion'),(15,'tasia_lloyd@hotmail.com',NULL,'cTiaLdUMPReC','3597-7985-3560-3668','SoundCloud','Streaming');
+INSERT INTO `cuenta` VALUES (1,'maynard_penn@aol.com','maybard_penn','ajkosnf124','5317-6612-0661-0764','Platzi','Educacion'),(2,'kelli_brett@protonmail.com','BrettKel','bUtMATINdo','3546-9540-5360-2564','SoundCloud','Streaming'),(3,'hilde_milne@protonmail.com','milnehilde','stOrANIaNc','5086-3467-5068-2166','Drive','Nube'),(4,'hilde_milne@protonmail.com','milnehilde','PIRflAtegI','5086-3467-5068-2166','YoutubeMusic','Streaming'),(5,'levi_west@yandex.com','wevi','ArDAbcarIN','4953-1354-8126-0076','HBOMAX','Streaming'),(6,'levi_west@yandex.com','levi_west','ComPEneriL','4953-1354-8126-0076','Udemy','Educacion'),(7,'miguel_boyce@gmail.com','boycemig','opyaNAnETA','5030-6937-1756-2651','HBOMAX','Streaming'),(8,'lissette_silva@yandex.com','Silvalissette','oUgeNdRaPO','4146-7691-1911-4632','Dropbox','Nube'),(9,'refugio_reynolds@outlook.com',NULL,'nfiRsTICEo','4204-2672-6934-7929','Mega','Nube'),(10,'rosalyn_matthams@gmail.com','mattrosa','RpSEdGeNta','4201-6811-9381-2100','Spotify','Streaming'),(11,'ardell_samuels@mail.com',NULL,'acaNTAwmaTiv','5025-8381-1770-9900','Mega','Nube'),(12,'albertina_redman@yahoo.com','albertinaman','escUBsIBluSc','3536-8288-6563-3243','Spotify','Streaming'),(13,'ardell_samuels@mail.com','elsard','teRnaPORnOrM','5025-8381-1770-9900','Spotify','Streaming'),(14,'albertina_redman@yahoo.com','albertina_redman','CASpiSeCieSt','3536-8288-6563-3243','Platzi','Educacion'),(15,'tasia_lloyd@hotmail.com',NULL,'cTiaLdUMPReC','3597-7985-3560-3668','SoundCloud','Streaming');
 /*!40000 ALTER TABLE `cuenta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,13 +36,87 @@ INSERT INTO `descuento` VALUES (117,5,'MESGRATIS','YoutubeMusic','2021-02-18','P
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `log_cuenta`
+--
+
+LOCK TABLES `log_cuenta` WRITE;
+/*!40000 ALTER TABLE `log_cuenta` DISABLE KEYS */;
+INSERT INTO `log_cuenta` VALUES (2,'maynard_penn@aol.com','maybard_penn','NAtontLeAMil','5317-6612-0661-0764','2023-02-27 01:27:05','UPDATE','senior@localhost'),(3,'maynard_penn@aol.com','maybard_penn','GatitaMimosa','5317-6612-0661-0764','2023-02-27 01:27:16','UPDATE','senior@localhost');
+/*!40000 ALTER TABLE `log_cuenta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_descuento`
+--
+
+LOCK TABLES `log_descuento` WRITE;
+/*!40000 ALTER TABLE `log_descuento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_descuento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_pais`
+--
+
+LOCK TABLES `log_pais` WRITE;
+/*!40000 ALTER TABLE `log_pais` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_pais` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_pay`
+--
+
+LOCK TABLES `log_pay` WRITE;
+/*!40000 ALTER TABLE `log_pay` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_pay` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_service`
+--
+
+LOCK TABLES `log_service` WRITE;
+/*!40000 ALTER TABLE `log_service` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_service` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_tarjeta`
+--
+
+LOCK TABLES `log_tarjeta` WRITE;
+/*!40000 ALTER TABLE `log_tarjeta` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_tarjeta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `log_usuario`
+--
+
+LOCK TABLES `log_usuario` WRITE;
+/*!40000 ALTER TABLE `log_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_usuario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `pago`
 --
 
 LOCK TABLES `pago` WRITE;
 /*!40000 ALTER TABLE `pago` DISABLE KEYS */;
-INSERT INTO `pago` VALUES ('B4H9UMZK',1),('LCBHMVBY',2),('B4H9JMZK',3),('D6BG9AZU',3),('2FWYBYRB',4),('XNUTUJ9K',5),('LBF2NNWF',6),('7PE8DLNC',7),('EW6BPHPV',8),('DUCK982T',9),('AFUS3D73',10),('Q6FFPS9P',11),('JY574JYK',12),('TCRR8FL9',13),('TPUP6MQL',14),('7WHGBQAW',15);
+INSERT INTO `pago` VALUES ('B4H9UMZK',1),('LCBHMVBY',2),('D6BG9AZU',3),('2FWYBYRB',4),('XNUTUJ9K',5),('LBF2NNWF',6),('7PE8DLNC',7),('EW6BPHPV',8),('DUCK982T',9),('AFUS3D73',10),('Q6FFPS9P',11),('JY574JYK',12),('TCRR8FL9',13),('TPUP6MQL',14),('7WHGBQAW',15);
 /*!40000 ALTER TABLE `pago` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `pais`
+--
+
+LOCK TABLES `pais` WRITE;
+/*!40000 ALTER TABLE `pais` DISABLE KEYS */;
+INSERT INTO `pais` VALUES ('ARG','Argentina','Peso AR',189.14),('BR','Brasil','Real',5.15),('COL','Colombia','Peso CL',4714.27),('CR','Costa Rica','CRC',566.86),('ESP','Espania','Euro',0.93),('MEX','Mexico','Peso MX',19.17),('USA','Estados Unidos','U$D',1),('UY','Uruguay','Peso UY',39.13);
+/*!40000 ALTER TABLE `pais` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -94,7 +145,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `servicio` WRITE;
 /*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
-INSERT INTO `servicio` VALUES ('Drive','Nube',2.99,'Web, Movil'),('Dropbox','Nube',11.99,'Web, Pc, Movil'),('HBOMAX','Streaming',14.99,'Web, Movil, Tv'),('Mega','Nube',5.44,'Web, Movil, Pc'),('Netflix','Streaming',20,'Web, Pc, Movil, Tv'),('Platzi','Educacion',299,'Web'),('SoundCloud','Streaming',12,'Web'),('Spotify','Streaming',20.19,'Web, Pc, Movil, Tv'),('Udemy','Educacion',14.99,'Web'),('YoutubeMusic','Streaming',299,'Web');
+INSERT INTO `servicio` VALUES ('Drive','Nube',2.99,'Web, Movil'),('Dropbox','Nube',11.99,'Web, Pc, Movil'),('HBOMAX','Streaming',14.99,'Web, Movil, Tv'),('Mega','Nube',5.44,'Web, Movil, Pc'),('Netflix','Streaming',20,'Web, Pc, Movil, Tv'),('Platzi','Educacion',2.99,'Web'),('SoundCloud','Streaming',12,'Web'),('Spotify','Streaming',5.99,'Web, Pc, Movil, Tv'),('Udemy','Educacion',14.99,'Web'),('YoutubeMusic','Streaming',7.99,'Web');
 /*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -124,7 +175,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES ('39458059','Rosalyn','Matthams',17,'rosalyn_matthams@gmail.com'),('39478272','Maynard','Penn',16,'maynard_penn@aol.com'),('39559124','Hilde','Milene',25,'hilde_milne@protonmail.com'),('39681299','Miguel','Boyce',19,'miguel_boyce@gmail.com'),('40589745','Ardell','Samuels',20,'ardell_samuels@mail.com'),('42754535','Albertina','Redman',15,'albertina_redman@yahoo.com'),('43296287','Levi','West',29,'levi_west@yandex.com'),('43900273','Tasia','Lloyd',15,'tasia_lloyd@hotmail.com'),('44165687','Lissette','Silva',23,'lissette_silva@yandex.com'),('44419722','Kelli','Brett',15,'kelli_brett@protonmail.com'),('44570437','Refugio','Reynolds',23,'refugio_reynolds@outlook.com');
+INSERT INTO `usuario` VALUES ('39458059','Rosalyn','Matthams',17,'ARG','rosalyn_matthams@gmail.com'),('39478272','Maynard','Penn',16,'ESP','maynard_penn@aol.com'),('39559124','Hilde','Milene',25,'ESP','hilde_milne@protonmail.com'),('39681299','Miguel','Boyce',19,'MEX','miguel_boyce@gmail.com'),('40589745','Ardell','Samuels',20,'USA','ardell_samuels@mail.com'),('42754535','Albertina','Redman',15,'BR','albertina_redman@yahoo.com'),('43296287','Levi','West',29,'BR','levi_west@yandex.com'),('43900273','Tasia','Lloyd',15,'MEX','tasia_lloyd@hotmail.com'),('44165687','Lissette','Silva',23,'UY','lissette_silva@yandex.com'),('44419722','Kelli','Brett',15,'COL','kelli_brett@protonmail.com'),('44570437','Refugio','Reynolds',23,'CR','refugio_reynolds@outlook.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -137,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-30 21:15:34
+-- Dump completed on 2023-02-26 22:59:37

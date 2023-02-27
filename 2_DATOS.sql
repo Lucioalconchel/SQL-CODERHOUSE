@@ -1,9 +1,9 @@
 -- TABLA 1
 INSERT INTO servicio (service_name, type_service, price, plataform)
 VALUES
-    ('Platzi', 'Educacion', 299, 'Web'),
+    ('Platzi', 'Educacion', 2.99, 'Web'),
     ('Udemy', 'Educacion', 14.99, 'Web'),
-    ('YoutubeMusic', 'Streaming', 299, 'Web'),
+    ('YoutubeMusic', 'Streaming', 7.99, 'Web'),
     ('Spotify', 'Streaming', 5.99, 'Web, Pc, Movil, Tv'),
     ('Netflix', 'Streaming', 20, 'Web, Pc, Movil, Tv'),
     ('Dropbox', 'Nube', 11.99, 'Web, Pc, Movil'),
@@ -12,24 +12,35 @@ VALUES
     ('SoundCloud', 'Streaming', 12, 'Web'),
     ('HBOMAX', 'Streaming', 14.99, 'Web, Movil, Tv')
     ;
-
 -- TABLA 2
-INSERT INTO usuario (dni, first_name, last_name, age, email_user) 
+INSERT INTO pais (id_country, name_country, currency, change_dollar)
 VALUES
-	(39458059, 'Rosalyn','Matthams',17, 'rosalyn_matthams@gmail.com'),
-	(39681299,'Miguel','Boyce',19, 'miguel_boyce@gmail.com'),
-	(44570437,'Refugio','Reynolds',23, 'refugio_reynolds@outlook.com'),
-	(39559124,'Hilde','Milene',25, 'hilde_milne@protonmail.com'),
-	(40589745,'Ardell','Samuels',20, 'ardell_samuels@mail.com'),
-	(44165687,'Lissette','Silva',23, 'lissette_silva@yandex.com'),
-	(43900273,'Tasia','Lloyd',15, 'tasia_lloyd@hotmail.com'),
-    (42754535,'Albertina','Redman',15, 'albertina_redman@yahoo.com'),
-    (43296287,'Levi','West',29, 'levi_west@yandex.com'),
-	(44419722,'Kelli','Brett',15, 'kelli_brett@protonmail.com'),
-	(39478272,'Maynard','Penn',16, 'maynard_penn@aol.com')
+	('ARG','Argentina','Peso AR',189.14),
+    ('MEX','Mexico','Peso MX',19.17),
+    ('BR','Brasil','Real',5.15),
+    ('COL','Colombia','Peso CL',4714.27),
+    ('CR','Costa Rica','CRC',566.86),
+    ('ESP','Espania','Euro',0.93),
+    ('USA','Estados Unidos','U$D',1),
+    ('UY','Uruguay','Peso UY',39.13)
+    ;
+-- TABLA 3
+INSERT INTO usuario (dni, first_name, last_name, age, nationality, email_user) 
+VALUES
+	(39458059, 'Rosalyn','Matthams',17, 'ARG','rosalyn_matthams@gmail.com'),
+	(39681299,'Miguel','Boyce',19, 'MEX','miguel_boyce@gmail.com'),
+	(44570437,'Refugio','Reynolds',23, 'CR','refugio_reynolds@outlook.com'),
+	(39559124,'Hilde','Milene',25, 'ESP','hilde_milne@protonmail.com'),
+	(40589745,'Ardell','Samuels',20, 'USA','ardell_samuels@mail.com'),
+	(44165687,'Lissette','Silva',23, 'UY','lissette_silva@yandex.com'),
+	(43900273,'Tasia','Lloyd',15, 'MEX','tasia_lloyd@hotmail.com'),
+    (42754535,'Albertina','Redman',15, 'BR','albertina_redman@yahoo.com'),
+    (43296287,'Levi','West',29, 'BR','levi_west@yandex.com'),
+	(44419722,'Kelli','Brett',15, 'COL','kelli_brett@protonmail.com'),
+	(39478272,'Maynard','Penn',16, 'ESP','maynard_penn@aol.com')
     ;
 
--- TABLA 3
+-- TABLA 4
 INSERT INTO tarjeta( card_number, bank_name, security_code, expiration_date, type_card, first_name, last_name, dni, extension)
 VALUES
 	('4201-6811-9381-2100', 'BBVA', 847, '2024-08-01', 'VISA', 'Rosalyn', 'Matthams', 39458059, 1),
@@ -45,7 +56,7 @@ VALUES
     ('5317-6612-0661-0764', 'Wizink', 138, '2027-02-01', 'MASTERCARD', 'Maynard', 'Penn', 39478272, 1)
     ;
 
--- TABLA 4
+-- TABLA 5
 INSERT INTO cuenta ( email_user, user, password, card_number, service_name, type_service)
 VALUES
 	('maynard_penn@aol.com', 'maybard_penn', 'NAtontLeAMil', '5317-6612-0661-0764', 'Platzi', 'Educacion'), 
@@ -65,7 +76,7 @@ VALUES
 	('tasia_lloyd@hotmail.com', NULL, 'cTiaLdUMPReC', '3597-7985-3560-3668', 'SoundCloud', 'Streaming') 
     ;
 
--- TABLA 5
+-- TABLA 6
 INSERT INTO pago( payment_code, id_user)
 VALUES
 	('B4H9UMZK', 1),
@@ -85,7 +96,7 @@ VALUES
     ('7WHGBQAW', 15)
     ;
 
--- TABLA 6
+-- TABLA 7
 INSERT INTO reclamo ( id_user, date, description)
 VALUES
     (1, '2021-11-16', 'No se acredito mi suscripcion'),
@@ -94,7 +105,7 @@ VALUES
     (9, '2022-07-06', 'Catalogo reducido y no cuenta con proteccion para menores')
     ;
 
--- TABLA 7
+-- TABLA 8
 INSERT INTO sistema_operativo (so_name, so_version) 
 VALUES
     ('Windows_8.1','6.3'),
@@ -109,7 +120,7 @@ VALUES
     ('¡OS_13','13.7')
     ;
 
--- TABLA 8
+-- TABLA 9
 INSERT INTO plataforma( plataform, id_user, so_name, resolution)
 VALUES
     ('Movil', 1, '¡OS_13', '720X1280'),
@@ -129,7 +140,7 @@ VALUES
     ('Tv', 15, 'Android_12L', NULL)
     ;
     
--- TABLA 9
+-- TABLA 10
 INSERT INTO descuento (discount_id, id_user, discount_name, service_name, expiration_date, description)
 VALUES
     (181, 1, 'REINTEGRO35%', 'Platzi', '2022-12-04', '35% reintegro con la suscripcion de un anio'),

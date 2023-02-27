@@ -60,3 +60,13 @@ FROM cuenta AS C
 INNER JOIN tarjeta AS T ON
 (C.card_number = T.card_number)
 WHERE T.extension = 0;
+
+-- VIEW 6
+CREATE VIEW vw_payment AS
+select
+	P.payment_code,
+    C.email_user,
+    C.service_name
+ from pago AS P
+ INNER JOIN cuenta AS C ON
+ (P.id_user = C.id_user);
